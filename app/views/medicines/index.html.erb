@@ -1,0 +1,14 @@
+<h1>These Are Your Medicines</h1>
+
+<%= @current_user.email %>
+
+<ul>
+	<% @medicines.each do |medicine| %>
+		<li>
+			<%= medicine.name %>
+			<%= medicine.reminder_time %>
+		</li>
+	<% end %>
+</ul>
+
+

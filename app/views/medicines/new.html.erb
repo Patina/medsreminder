@@ -1,0 +1,20 @@
+<h2>To Get Started, Enter Your Medicine Information Below</h2>
+
+
+<%= form_for @medicine do |f| %>
+	<%= f.label :name %><br />
+	<%= f.text_field :name, placeholder: "Medicine Name" %><br />
+	<%= f.hidden_field :user_id, :value => 1 %>
+	<div class="datetimeinput">
+	<%= f.label :reminder_time %><br />
+	<%= f.time_field :reminder_time, placeholder: "enter time" %><br /></div>
+
+	<%= f.submit "Enter Medicine" %>
+<% end %>
+
+<h2>When you are finished, click here to see what you entered</h2>
+
+
+
+
+
