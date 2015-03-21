@@ -3,18 +3,16 @@
 
 
 	<% current_user.medicines.each do |medicine| %>
-			<!--<li>!-->
 			<table>
 				<tr>
 			<td><%= medicine.name %></td>
 			<td><%= medicine.reminder_time ? medicine.reminder_time.strftime("at %I:%M%p") : "No time set" %></td>
+			<td><%= medicine.dosage %></td>
+			<td><%= link_to 'delete reminder', medicine_path(medicine), method: :delete %></td>
+			<td><%= link_to 'edit reminder', edit_medicine_path(medicine) %></td>
+
 			</tr>
 			</table>
-		<!--</li>!-->
 	<% end %>
-
-
-<h2>If you need to make any changes, click here</h2>
-<p>asynchronous JS will go here to bring form up to the user</p>
 
 

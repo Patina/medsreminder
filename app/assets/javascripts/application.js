@@ -20,5 +20,8 @@
 
 
 //});
-
+$(document).on 'page:change', function(){
+$('.medform').bind('ajax:success', function(){
+  alert("You have updated your medicine");
+});
 

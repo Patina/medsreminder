@@ -16,6 +16,7 @@
  */
 body {
 	background-color: seagreen;
+
 }
 h1 {
 	text-align: center;
@@ -36,3 +37,16 @@ table {
     font-size: 1.25em;
 
 }
+table, th, td {
+    border: 1px solid black;
+    width: 60%;
+    background-color: white;
+
+}
+
+
+
+
+
+
+

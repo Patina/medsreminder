@@ -16,7 +16,8 @@ gem 'jquery-ui-rails'
 gem 'mandrill-api'
 gem 'clockwork'
 gem 'delayed_job_active_record'
-gem "daemons"
+gem 'daemons'
+gem 'twilio-ruby', '~> 3.12'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

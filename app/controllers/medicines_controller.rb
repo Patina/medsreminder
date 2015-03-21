@@ -1,5 +1,5 @@
 class MedicinesController < ApplicationController
-	#before_action :set_medicine, only: [:edit, :update, :show, :destroy]
+	before_action :set_medicine, only: [:edit, :update, :show, :destroy]
 
 	def index
 		@current_user = current_user
@@ -13,11 +13,14 @@ class MedicinesController < ApplicationController
     def show
     end
 
+    def update
+    	@medicine.update(params[:medicine])
+    	redirect_to @medicine, flash[:notice] = "You have updated your medicine."
+  	end
+
 
   # SendEmailJob.set(wait: 3.seconds).perform_later(@medicine)
-	def create
-		#puts "Check here"
-  		
+	def create  		
   		@medicine.user_id = current_user.id
   		if @medicine.save
   			flash[:notice] = "You have entered your medicines"
@@ -26,12 +29,21 @@ class MedicinesController < ApplicationController
   			render :back, flash[:notice] = "Please enter your medicines"
   		end
 	end	
+
+	def destroy
+		@medicine.destroy
+		redirect_to profile_path
+	end
 	
 	private
 	
 	def med_params
-	 params.require(:medicine).permit(:name, :user_id, :reminder_time)
+	 params.require(:medicine).permit(:name, :user_id, :reminder_time, :dosage)
 	end
+
+	def set_medicine
+    	@medicine = Medicine.find(params[:id])
+    end
 end
 
 
@@ -45,10 +57,6 @@ end
 #       flash[:alert] = "There was a problem deleting the user."
 #     end
 #     redirect_to users_path
-#   end
-
-# 	def set_medicine
-#     @medicine = Medicine.find(params[:id])
 #   end
 
 
