@@ -11,16 +11,16 @@ class MedicinesController < ApplicationController
   		@medicine = Medicine.new
   	end
 
-  	def edit
-  	end
+  def edit
+  end
   	
-    def show
-    end
+  def show
+  end
 
-    def update
+  def update
     	@medicine.update(params[:medicine])
     	redirect_to @medicine, flash[:notice] = "You have updated your medicine."
-  	end
+  end
 
 
   # SendEmailJob.set(wait: 3.seconds).perform_later(@medicine)

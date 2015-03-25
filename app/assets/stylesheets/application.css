@@ -52,8 +52,12 @@ h2 {
 	float: left;
 	clear: both;
 }
+.time {
+	margin-left: 10px;
+}
 #done {
 	margin-bottom: 120px;
+	clear: both;
 }
 #reminder {
 	width: 68px;
@@ -67,13 +71,15 @@ h2 {
 	clear: both;
 }*/
 input {
-	width: 140px;
+
 }
 #medicine_reminder_time {
 	float: left;
 	clear: both;
 }
-
+hr {
+	width: 80%;
+}
 
 table {
 	margin-left: auto;
@@ -92,24 +98,29 @@ th, td {
     height: 60px;
 
 }
+tr:hover {       
+	background-color: #ffffff;
+}
 
 #formpro {
 	display: inline;
 }
-#namepro {
-	display: inline;
+.namepro {
+	/*margin-left: -150px;*/
 }
-#timepro {
-	float: left;
-	display: inline;
+.timepro {
+	margin-left: 8px;
+	/*position: absolute;
+    left: 230px;
+    top: 100px;
+	/*margin-right: auto;
+	margin-left: auto;*/
 }
 #dosepro {
-	float: left;
-	display: inline;
+	
 }
 #enterpro {
 	float: left;
-	display: inline;
 }
 #rule {
 	margin-top: 30px;

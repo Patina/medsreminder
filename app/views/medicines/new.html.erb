@@ -14,8 +14,8 @@
 	</div>
 
 	<div id="time">
-	<%= f.label :reminder_time %><br />
-    <%= f.time_select :reminder_time, {ampm: true, minute_step: 15} %><br /><br />
+	<%= f.label :reminder_time, class: "time" %><br />
+    <%= f.time_select :reminder_time, {ampm: true, minute_step: 15}, class: "time" %><br /><br />
 	</div>
 
 	<div id="number">
