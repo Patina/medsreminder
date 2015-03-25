@@ -7,12 +7,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 	<%= link_to 'sign in', new_user_session_path %> | <%= link_to 'sign out', destroy_user_session_path %>
-	<p class="notice"><%= notice %></p>
+	<div>
+		<%= flash[:notice] if flash[:notice] %>
+		<%= flash[:alert] if flash[:alert] %>
+	</div>
 
-	
-    <p class="alert"><%= alert %></p>
 
 <%= yield %>
 

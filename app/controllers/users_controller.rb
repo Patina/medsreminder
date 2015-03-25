@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	before_action :authenticate_user!, only: [:profile]
 
   def profile
+    @medicine = Medicine.new
     render :show
   end
 
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
   	def create
     @user = User.new(user_params)
     if @user.save
-    redirect_to @user, notice: "New user created." # @user is the same as user_path(@user.id)
+    redirect_to @user, notice: "New user created." 
   else
     render :new
     end

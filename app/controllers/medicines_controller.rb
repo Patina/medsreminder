@@ -1,6 +1,7 @@
 class MedicinesController < ApplicationController
 	before_action :set_medicine, only: [:edit, :update, :show, :destroy]
-
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+	
 	def index
 		@current_user = current_user
 		@medicines = Medicine.where(user_id: current_user.id)
@@ -10,6 +11,9 @@ class MedicinesController < ApplicationController
   		@medicine = Medicine.new
   	end
 
+  	def edit
+  	end
+  	
     def show
     end
 
@@ -21,15 +25,22 @@ class MedicinesController < ApplicationController
 
   # SendEmailJob.set(wait: 3.seconds).perform_later(@medicine)
 	def create  		
+  		@medicine = Medicine.new(med_params)
   		@medicine.user_id = current_user.id
+
   		if @medicine.save
   			flash[:notice] = "You have entered your medicines"
-  			redirect_to medicines_path
+  			if params[:medicine][:source] == "profile"
+          redirect_to profile_path #profile_path
+        else
+          redirect_to new_medicine_path
+        end
   		else
-  			render :back, flash[:notice] = "Please enter your medicines"
+        flash[:notice] = "Please enter your medicines"
+  			render :new
   		end
-	end	
 
+	end	
 	def destroy
 		@medicine.destroy
 		redirect_to profile_path
@@ -47,17 +58,6 @@ class MedicinesController < ApplicationController
 end
 
 
-
-
-# def destroy
-#     @user = User.find(params[:id])
-#     if @user.destroy
-#       flash[:notice] = "User deleted successfully."
-#     else
-#       flash[:alert] = "There was a problem deleting the user."
-#     end
-#     redirect_to users_path
-#   end
 
 
 

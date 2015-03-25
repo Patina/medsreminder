@@ -15,38 +15,107 @@
  *= require_self
  */
 body {
-	background-color: seagreen;
-
+	background-color: OldLace;
+	font-family: 'Open Sans', sans-serif;
 }
 h1 {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 3.5em;
-	color: white;
+	font-size: 2.5em;
+	color: gray;
 }
 h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 2.0em;
 	text-align: center;
-
+	margin-top: 100px;
+	color: gray;
 }
+/* medicines/new page*/
+#new {
+	margin-bottom: 100px;
+}
+#new_medicine {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+}
+#name, #number, #dose {
+	float: left;
+}
+/*#number {
+	float: left;
+}*/
+
+#time, #enter {
+	float: left;
+	clear: both;
+}
+#done {
+	margin-bottom: 120px;
+}
+#reminder {
+	width: 68px;
+	margin-left: 12px;
+}
+/*#dose, {
+	float: left;
+}*/
+/*#enter {
+	float: left;
+	clear: both;
+}*/
+input {
+	width: 140px;
+}
+#medicine_reminder_time {
+	float: left;
+	clear: both;
+}
+
+
 table {
 	margin-left: auto;
     margin-right: auto;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.25em;
-
-}
-table, th, td {
-    border: 1px solid black;
+    font-size: 1.1em;
+    border-collapse: collapse;
     width: 60%;
-    background-color: white;
+}
+
+th, td {
+    border-top: 3px solid gray;
+    /*background-color: white;*/
+    padding-left: 20px;
+    text-align: left;
+    height: 60px;
 
 }
 
-
-
-
+#formpro {
+	display: inline;
+}
+#namepro {
+	display: inline;
+}
+#timepro {
+	float: left;
+	display: inline;
+}
+#dosepro {
+	float: left;
+	display: inline;
+}
+#enterpro {
+	float: left;
+	display: inline;
+}
+#rule {
+	margin-top: 30px;
+	margin-bottom: 60px;
+	clear: both;
+}
 
 
 

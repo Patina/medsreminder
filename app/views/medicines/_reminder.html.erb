@@ -1,0 +1,30 @@
+
+<%= form_for @medicine do |f| %>
+	<div id="formpro">
+
+	<div id="namepro">
+	<%= f.label :name %><br />
+	<%= f.text_field :name, placeholder: "Medicine Name" %><br /><br />
+	</div>
+
+	<div id="timepro">	
+	<%= f.label :reminder_time %><br />
+	<%= f.time_select :reminder_time, {ampm: true, minute_step: 15} %><br /><br />
+	</div>
+	
+	<div id="dosepro">
+	<%= f.label :dosage %><br />
+	<%= f.text_field :dosage, placeholder: "Enter Dosage" %><br /><br />
+	</div>
+
+	<%= f.hidden_field :source, value: "profile" %>
+	
+	<div id="enterpro">
+	<%= f.submit "Enter Medicine" %><br /><br />
+	</div>
+	<% end %>
+	</div> <!--ends formpro!-->
+
+
+<hr id="rule">
+

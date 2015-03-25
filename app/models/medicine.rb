@@ -1,6 +1,8 @@
 class Medicine < ActiveRecord::Base
-	require 'mandrill'
+	validates :name, presence: true
 	belongs_to :user
+
+	require 'mandrill'
 
 	def delivery_time
 		(self.reminder_time.hour * 60) + self.reminder_time.min
@@ -11,14 +13,14 @@ class Medicine < ActiveRecord::Base
 		message = {
 		:subject=> "Message from Meds Reminder", 
 		:from_name=> "Jane@MedsReminder.com",
-		:text=> "Take Your Medicine Now! Do Not Forget!",
+		:text=> "",
 		:to=>[
 			{
 			:email=> self.user.email,
 			:name=> self.user.First_name
 			}
 			],
-		:html=>"<html><h1>Take Your Medicine Now! Do Not Forget!</h1></html>",
+		:html=>"",
 		:from_email=>'medsreminder@medsreminder.com'
 		} 
 		sending = m.messages.send message

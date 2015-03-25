@@ -8,7 +8,7 @@ namespace :medicines do
 		end
 	  puts "done."
 	end
-
+end
 # 	task :text => :environment do
 # 	Medicine.all.each do |medicine|
 # 		SendTextJob.set(wait: medicine.delivery_time.minutes).perform_later(medicine)	

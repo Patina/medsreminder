@@ -1,27 +1,34 @@
-<h2>To Get Started, Enter Your Medicine Information Below</h2>
+<h1 id="new">Enter Your Medication Information Below</h1>
 
-<div class="medform">
 
 <%= form_for @medicine do |f| %>
-
+	
+	<div id="name">
 	<%= f.label :name %><br />
-	<%= f.text_field :name, placeholder: "Medicine Name" %><br />
+	<%= f.text_field :name, placeholder: "Medicine Name" %><br /><br />
+	</div>
+
+	<div id="dose">
+	<%= f.label :dosage %><br />
+	<%= f.text_field :dosage, placeholder: "Enter Dosage" %><br /><br />
+	</div>
+
+	<div id="time">
+	<%= f.label :reminder_time %><br />
+    <%= f.time_select :reminder_time, {ampm: true, minute_step: 15} %><br /><br />
+	</div>
+
+	<div id="number">
+	<%= f.label :telephone_number %><br />
+	<%= telephone_field :telephone_number, placeholder: "Telephone Number" %><br /><br /></div>
 
 	<%= f.hidden_field :user_id, :value => 1 %>
 
-	<div class="datetimeinput">
-	<%= f.label :reminder_time %><br />
-	<%= f.time_field :reminder_time, placeholder: "Enter Time" %><br />
-	</div>
-
-	<%= f.label :dosage %><br />
-	<%= f.text_field :dosage, placeholder: "Enter Dosage" %><br /></div>
-
+	<div id="enter">
 	<%= f.submit "Enter Medicine" %>
-<% end %>
-</div><!--ends medform
-
-<h2>When you are finished, click here to see what you entered</h2>
+	<a href="/profile"><%= f.submit "Click When done", id: "done" %></a>
+	</div>
+	<% end %>
 
 
 
