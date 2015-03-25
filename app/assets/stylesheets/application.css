@@ -14,6 +14,14 @@
  *= require_tree .
  *= require_self
  */
+
+ .suform {
+ 	float: right;
+ 	margin-right: 150px;
+ 	clear: both;
+ }
+ 
+
 body {
 	background-color: OldLace;
 	font-family: 'Open Sans', sans-serif;
