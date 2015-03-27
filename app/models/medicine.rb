@@ -8,6 +8,19 @@ class Medicine < ActiveRecord::Base
 		(self.reminder_time.hour * 60) + self.reminder_time.min
 	end
 
+	def text_user
+		account_sid = ENV['TWILIO_SID']
+		auth_token = ENV['TWILIO_AUTH']
+		from_number = ENV['TWILIO_NUMBER']
+		@client = Twilio::REST::Client.new account_sid, auth_token
+		body = "Please take your #{self.name} now."
+ 		message = @client.account.messages.create(
+ 			:body => body, 
+     		:to => self.user.telephone_number,
+    		:from => from_number)
+ 		puts message.to #puts message.sid?
+	end
+
 	def remind_user
 		m = Mandrill::API.new 
 		message = {

@@ -1,5 +1,6 @@
 class Reminder < ApplicationMailer
 
+	#this is being used to send email messages
 	def medicine(medicine)
 		@medicine = medicine
 		mail(to: medicine.user.email, subject: 'Medication Reminder')
