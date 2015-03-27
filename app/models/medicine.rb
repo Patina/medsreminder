@@ -18,7 +18,7 @@ class Medicine < ActiveRecord::Base
  			:body => body, 
      		:to => self.user.telephone_number,
     		:from => from_number)
- 		puts message.to #puts message.sid?
+ 		puts message.to 
 	end
 
 	def remind_user

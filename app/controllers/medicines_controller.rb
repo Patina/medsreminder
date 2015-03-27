@@ -57,18 +57,3 @@ class MedicinesController < ApplicationController
     end
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

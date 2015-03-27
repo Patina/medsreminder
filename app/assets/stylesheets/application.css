@@ -61,10 +61,6 @@ h2 {
 #name, #number, #dose {
 	float: left;
 }
-/*#number {
-	float: left;
-}*/
-
 #time, #enter {
 	float: left;
 	clear: both;
@@ -80,13 +76,6 @@ h2 {
 	width: 68px;
 	margin-left: 12px;
 }
-/*#dose, {
-	float: left;
-}*/
-/*#enter {
-	float: left;
-	clear: both;
-}*/
 input {
 
 }
@@ -97,7 +86,6 @@ input {
 hr {
 	width: 80%;
 }
-
 table {
 	margin-left: auto;
     margin-right: auto;
@@ -106,7 +94,6 @@ table {
     border-collapse: collapse;
     width: 60%;
 }
-
 th, td {
     border-top: 3px solid gray;
     /*background-color: white;*/
@@ -127,11 +114,6 @@ tr:hover {
 }
 .timepro {
 	margin-left: 8px;
-	/*position: absolute;
-    left: 230px;
-    top: 100px;
-	/*margin-right: auto;
-	margin-left: auto;*/
 }
 #dosepro {
 	

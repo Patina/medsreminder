@@ -1,3 +1,3 @@
-worker: RAILS_ENV=production bin/delayed_job start
+worker: bin/delayed_job -e production start
 
 
