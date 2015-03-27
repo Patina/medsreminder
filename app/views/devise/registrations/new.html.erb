@@ -1,6 +1,6 @@
-<h1>Medication Reminder</h1>
+<h1 class="signinup">Medication Reminder</h1>
 
-<img src="/assets/medpic.jpg" height="450" width="">
+<img src="/assets/medpic.jpg" height="400" width="">
 
 <div class="suform">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -28,7 +28,7 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+<%= render "devise/shared/links" %>
 
-<!--<%= render "devise/shared/links" %>!-->
 </div>
 
