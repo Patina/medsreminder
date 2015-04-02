@@ -12,8 +12,11 @@ gem 'devise'
 gem 'jquery-ui-rails'
 gem 'mandrill-api'
 gem 'delayed_job_active_record'
-gem 'daemons'
 gem 'twilio-ruby', '~> 3.12'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
