@@ -3,21 +3,20 @@
 <%= form_for @medicine do |f| %>
 <div id="formpro">
 
-	<div class="namepro">
+
 	<%= f.label :name, class: "namepro" %><br />
-	<%= f.text_field :name, placeholder: "Medicine Name", class: "namepro" %><br /><br /></div>
+	<%= f.text_field :name, placeholder: "Medicine Name", class: "namepro" %>
 
-	<div class="timepro">
-	<%= f.label :reminder_time, class: "timepro" %><br />
-	<%= f.time_select :reminder_time, {ampm: true, minute_step: 15}, class: "timepro" %><br /><br /></div>
-	
-	<div class="dosepro">
 	<%= f.label :dosage, id: "dosepro" %><br />
-	<%= f.text_field :dosage, placeholder: "Enter Dosage", id: "dosepro" %><br /><br /></div>
+	<%= f.text_field :dosage, placeholder: "Enter Dosage", id: "dosepro" %><br /><br />
 
+	<div id="time">
+	<%= f.label :reminder_time, class: "timepro" %><br />
+	<%= f.time_select :reminder_time, {ampm: true, minute_step: 15}, class: "timeproe" %></div>
+	
 	<%= f.hidden_field :source, value: "profile" %>
 	
-	<%= f.submit "Enter Medicine" , id: "enterpro" %><br /><br />
+	<%= f.submit "Enter Medicine", id: "enterpro" %><br /><br />
 	<% end %>
 </div> <!--ends formpro!-->
 
