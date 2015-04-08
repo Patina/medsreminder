@@ -19,7 +19,10 @@
 
  .siform {
  	width: 300px;
- 	font-size: .7em;
+ 	font-size: 1.0em;
+ 	margin-left: 3em;
+ 	margin-bottom: 4em;
+
  }
  .nav {
  	z-index: 1;
@@ -43,6 +46,8 @@
  	text-align: center;
  	font-size: 3.5em;
  	margin-top: 100px;
+ 	margin-left: 3em;
+
  }
  
 img {
@@ -66,18 +71,41 @@ h1 {
 }
 section {
 	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
+	margin-left: 3em;
+
 
 }
 .womanpic {
 	margin-right: 30px;
+	display: block;
+	/*border:1px solid red;*/
+	float:left;
 }
+
+.test p {
+	/*border:2px solid green;*/
+	width:600px;
+	float:left;
+	font-size: 1.5em;
+
+}
+
+.test {
+	width:900px;
+	height:300px;
+	/*border:2px solid black;*/
+}
+
 h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 2.0em;
 	text-align: center;
 	margin-top: 100px;
 	color: gray;
+}
+#margin {
+	margin-top: 30px;
 }
 header {
 	width: 100%;
@@ -91,6 +119,14 @@ header {
 	height: auto;
 	z-index: -1;
 }
+
+.suform {
+	margin-left: 3em;
+	margin-bottom: 4em;
+
+
+}
+
 
 /* medicines/new page*/
 #new {

@@ -1,71 +1,82 @@
 <%= image_tag "medpic.jpg", class: "picture" %>
+
 <div class="nav">
   <ul>
     <li><a href="#one">About</a></li>
     <li><a href="#two">Testimonials</a></li>
     <li><a href="#three">Features</a></li>
   </ul>
-</div>
+</div><!--closes nav!-->
  
- <a id="one"></a>
+<a id="one"></a>
 
- <h1 class="signinup">Meds Message</h1>
+<h1 class="signinup">Meds Message</h1>
 
 <div class="container-fluid">
-  <div class="row">
-  <div class="col-md-4">
-  <p>Meds Message is an easy to use, convenient service that will automatically notify you when it is time to take your medicines.</p></div>
 
-  <div class="row">
-  <div class="col-md-4">
-    <p>You and your loved ones can stop worrying that you will miss your medication times, especially when taking many medications.</p></div>
-
-  <div class="row">
-  <div class="col-md-4">
-  <p>Sign up today for this free and convenient service.</p>
-  <%= render "devise/shared/links" %>
-</div>
+  <!-- <div class="row"> -->
+    <div class="col-md-4">
+      <p>Meds Message is an easy to use, convenient service that will automatically notify you when it is time to take your medicines.</p>
+    </div>
+  <!-- </div>  -->
+  
+  <!-- <div class="row"> -->
+    <div class="col-md-4">
+      <p>You and your loved ones can stop worrying that you will miss your medication times, especially when taking many medications.</p>
+    </div>
+  <!-- </div> -->
+<!--   <div class="row"> -->
+    <div class="col-md-4">
+      <p>Sign up today for this free and convenient service.</p>
+    </div>
+  <!-- </div>  --> 
 </div> <!--closes container fluid!-->
 
 <a id="two"></a>
-<section>
-<div class="test">
-<p><%= image_tag "womantwo.jpg", class: "womanpic" %>"Taking all my medications used to be so confusing. Meds Message helped me to </br>clarify what I am supposed to take and when."</p></div>
 
-<div class="test">
-<p><%= image_tag "womantwo.jpg", class: "womanpic" %>"Since I signed up for Meds Message, my family doesn't worry that I will forget </br>to take my medicines on time."</p></div>
+<section>
+  <div class="test">
+    <%= image_tag "womantwo.jpg", class: "womanpic" %>
+    <p>"Taking all my medications used to be so confusing. Meds Message helped me to clarify what I am supposed to take and when."</p>
+  </div>
+
+  <div class="test">
+    <%= image_tag "womantwo.jpg", class: "womanpic" %>
+    <p>"Since I signed up for Meds Message, my family doesn't worry that I will forget to take my medicines on time."</p>
+  </div>
 </section>
 
 <a id="three"></a>
-<section>
-  <p>Choose email or text messing service</p>
-</section>
+
+  <h2 id="margin">Choose email or text messing service</h2>
+
 
 <div class="siform">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
      <div class="field">
-     <%= f.label :email %>
-     <%= f.email_field :email, autofocus: true %>
-    </div></br>
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
+     </div></br>
 
     <div class="field">
-     <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off" %>
-   </div>
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
 
-  <!--<div class="field">
+  <div class="field">
    <% if devise_mapping.rememberable? %>
        <%= f.check_box :remember_me %>
        <%= f.label :remember_me %>
-     </div>!-->
+     </div>
 
    <% end %><br />
 
-  <div class="actions">
+    <div class="actions">
      <%= f.submit "Log in" %>
+    </div>
+          <%= render "devise/shared/links" %>
 
-   </div>
 
     <% end %>
-</div>
+</div><!-- closed siform!-->
