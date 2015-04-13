@@ -1,0 +1,17 @@
+<h1>Welcome to Cards!</h1>
+<%= link_to 'add card', cards_path, method: :post, remote: true %><!--ajax request!-->
+
+<!--sets up the basic card !-->
+<div id="board">
+<% @cards.each do |card| %>
+	<%= content_tag :div, class: "card" do %>
+		<div class="header">
+			<div class="nav">
+				<% link_to "X", "/" %>
+			</div>
+				<%= content_tag :h3, card.title %>
+		</div>
+				<%= content_tag :p, card.body %>
+	<% end %>
+<% end %>
+</div><!--closes board!-->

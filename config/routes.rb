@@ -14,6 +14,7 @@ end
 
   resources :users 
   resources :medicines 
+  resources :cards, only: [:create, :update, :destroy, :index]
 
   get '/profile', to: 'users#profile'
   
