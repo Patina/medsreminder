@@ -17,3 +17,8 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('ready page:load', function() {
+	$(document).on('ajax:success', '.nav', function(e) {
+		$(e.currentTarget).closest('.card').fadeOut();
+	});
+});

@@ -15,10 +15,13 @@
   <header>
   </header>
 
-	<div>
-		<!--<%= flash[:notice] if flash[:notice] %>
-		<%= flash[:alert] if flash[:alert] %>!-->
-	</div>
+	<!--<div>
+	  <%= flash[:notice] if flash[:notice] %>
+		<%= flash[:alert] if flash[:alert] %>
+	</div>!-->
+    <% if flash[:notice] %><%= content_tag :p, notice, id: :notice %><% end %> 
+    <% if flash[:alert] %><%= content_tag :p, alert, id: :alert %><% end %>
+
 
 
 <%= yield %>

@@ -1,9 +1,18 @@
 <h1>Welcome to Cards!</h1>
+	<nav>
+		<% if user_signed_in? %>
+			<%= link_to 'sign out', destroy_user_session_path, method: :delete, class: :button %>
+			<%= link_to 'add card', cards_path, method: :post, remote: :true, class: :button %>
+		<!--<% else %>
+			<%= link_to 'sign in', new_user_session_path, class: :button %>
+			<%- link_to 'sign up', new_user_registration_path, class: :button %>
+		<% end %>!-->
+	</nav>
+
+
 <%= link_to 'add card', cards_path, method: :post, remote: true %><!--ajax request!-->
 
 <!--sets up the basic card !-->
 <div id="board">
-<% @cards.each do |card| %>
-	
-<% end %>
-</div><!--closes board!-->
+	<%= render @cards %>
+</div>
